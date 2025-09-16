@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import CompanyModel from "../models/companyModels.js";
 import bcrypt from "bcryptjs";
 import UserModel from "../models/userModel.js";
-import Inventory from "../models/Inventorymodel.js";
+import Inventory from "../models/inventoryModel.js";
 
 
 
