@@ -1,4 +1,4 @@
-import Inventory from "../models/inventorymodel.js";
+import Inventory from "../models/inventoryModel.js";
 import mongoose from "mongoose";
 import User from "../models/userModel.js";
 
