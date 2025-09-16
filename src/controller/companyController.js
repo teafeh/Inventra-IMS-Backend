@@ -2,8 +2,7 @@ import mongoose from "mongoose";
 import CompanyModel from "../models/companyModels.js";
 import bcrypt from "bcryptjs";
 import UserModel from "../models/userModel.js";
-import Inventorymodel from "../models/inventorymodel.js";
-
+import InventoryModel from "../models/inventoryModel.js";
 
 
 
@@ -48,7 +47,7 @@ export const getStaffActivity = async (req, res) => {
     if (!staff) return res.status(404).json({ message: "Staff not found" });
 
     // Find all inventory items where this staff has logs
-    const inventories = await Inventorymodel.find({
+    const inventories = await InventoryModel.find({
       company: companyId,
       "logs.staff": new mongoose.Types.ObjectId(staffId)
     }).lean();
@@ -80,7 +79,7 @@ export const getStaffActivity = async (req, res) => {
 export const getReports = async (req, res) => {
   try {
     const companyId = req.company.id;
-    const inventory = await Inventory.find({ company: companyId });
+    const inventory = await InventoryModel.find({ company: companyId });
     res.json({ inventory });
   } catch (err) {
     res.status(500).json({ message: err.message });
