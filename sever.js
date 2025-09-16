@@ -1,13 +1,13 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import connectDB from "./src/config/db.js";
+import connectDB from "./config/db.js";
 
-import productRoutes from "./src/routes/productRoutes.js";
-import userRoutes from "./src/routes/userRoutes.js";
-import companyRoutes from "./src/routes/companyRoutes.js";
-import authRoutes from "./src/routes/authRoutes.js"
-import inventoryRoutes from "./src/routes/inventoryRoutes.js";
+import productRoutes from "./routes/productRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
+import companyRoutes from "./routes/companyRoutes.js";
+import authRoutes from "./routes/authRoutes.js"
+import inventoryRoutes from "./routes/inventoryRoutes.js";
 
 dotenv.config();
 connectDB();
