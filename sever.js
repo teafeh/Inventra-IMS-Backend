@@ -15,7 +15,7 @@ connectDB();
 const app = express();
 
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({ origin: "https://ims-frontend-one-mu.vercel.app" }));
 
 app.get("/", (req, res) => {
   res.send("Backend is running ;)");
